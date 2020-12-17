@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'Candara';
+  src: url("https://genshin.tmkfrench.fr/ressources/candara.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'NeoGrey';
+  src: url("https://genshin.tmkfrench.fr/ressources/neogreyregular.otf") format("truetype")
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.leaflet-popup-content h1 {
+  font-family: 'Candara';
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.leaflet-popup-content h2 {
+  font-family: 'Candara';
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+
+.leaflet-popup-content h3 {
+  font-family: 'Candara';
+  font-size: 20px;
+  font-weight: bold;
+  color: #bf4646;
+  text-shadow: 2px 2px 3px rgb(151, 137, 128);
+  white-space: nowrap;
+}
+
+.leaflet-popup-content h4 {
+  font-family: 'Candara';
+  text-align: center;
+  font-size: 28px;
+  text-shadow: 3px 3px 4px rgb(151, 137, 128);
+  color: rgb(34, 33, 33);
+  white-space: nowrap;
+}
+
+.leaflet-popup-content h5 {
+  font-family: 'Candara', 'comic sans ms', sans-serif;
+  margin : 0;
+  font-size: 12pt;
+  color: rgb(0, 0, 0);
+}
+
+.leaflet-container {
+  background: #000;
+}
+
+.leaflet-popup-content {
+  min-width: 250px;
+  width: auto;
+  text-align: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.thumb {
+  border-radius: 4px;
+  width: 230px;
+}
+
+a:-any-link {
+  color: black;
+  text-decoration: none;
+}
+
+#menuhaut {
+  text-decoration: none;
+  text-align : center;
+  top: 0px;
+  left: 0px;
+  margin : 0;
+  padding-top : 0px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 80px;
+}
+
+#banniere {
+  font-family: 'Neogrey','comic sans ms', sans-serif;
+  font-size: 26px;
+  color: #FF8000;
+}
+
+//#btnmenu {
+//  position: absolute;
+//  padding-top: 16px;
+//  cursor: pointer;
+//  z-index: 2;
+//  width: auto;
+//}
+//
+//#mapid {
+//  position: absolute;
+//  top: 80px;
+//  right: 0;
+//  bottom: 0;
+//  left: 50%;
+//  transform: translate(-50%, 0%);
+//  width: 100%;
+//}
+
+#activation-select {
+  position: relative;
+  top: -8px;
+  width: 165px;
+}
+
+#activation-select-box {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 20px;
+  position: relative;
+  -webkit-transition-property: background, border, box-shadow, text-shadow;
+  -webkit-transition-duration: .15s;
+  -moz-transition-property: background, border, box-shadow, text-shadow;
+  -moz-transition-duration: .15s;
+  -o-transition-property: background, border, box-shadow, text-shadow;
+  -o-transition-duration: .15s;
+  -ms-transition-property: background, border, box-shadow, text-shadow;
+  -ms-transition-duration: .15s;
+  transition-property: background, border, box-shadow, text-shadow;
+  transition-duration: .15s;
+  padding: 5px;
+  z-index: 99;
+  width: 135px;
+}
+
+#activation-select-box::after {
+  border: 6px solid transparent;
+  border-top-color: rgba(0,0,0,.35);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 11px;
+  -webkit-transition-property: border;
+  -webkit-transition-duration: .15s;
+  -moz-transition-property: border;
+  -moz-transition-duration: .15s;
+  -o-transition-property: border;
+  -o-transition-duration: .15s;
+  -ms-transition-property: border;
+  -ms-transition-duration: .15s;
+  transition-property: border;
+  transition-duration: .15s;
+  right: 7px;
+  width: 0;
+}
+
+#activation-select-box:hover,
+.selecting {
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, transparent 0%, rgba(0,0,0,0.2) 100%);
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.2) 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, rgba(0,0,0,0.2) 100%);
+  background-image: -ms-linear-gradient(top, transparent 0%, rgba(0,0,0,0.2) 100%);
+  background-image: linear-gradient(top, transparent 0%, rgba(0,0,0,0.2) 100%);
+  border-color: #666;
+  box-shadow: 0 1px 3px rgba(0,0,0,.35);
+  text-shadow: 1px 1px 1px rgba(255,255,255,1);
+}
+
+#activation-select-box:hover::after {
+  border-top-color: rgba(0,0,0,1);
+}
+
+#activation-select-box:active {
+  box-shadow: inset 0 1px 5px rgba(0,0,0,.45);
+  text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#activation-select-options {
+  box-shadow: 0 1px 3px rgba(0,0,0,.35);
+  display: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  left: 20px;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  width: min-content;
+  z-index: 98;
+}
+
+#activation-select-options li {
+  background-color: #fff;
+  cursor: pointer;
+  display: block;
+  list-style-type: none;
+  float: left;
+  font-size: 13px;
+  padding: 2px;
+  white-space: nowrap;
+  -webkit-transition-property: background;
+  -webkit-transition-duration: .15s;
+  -moz-transition-property: background;
+  -moz-transition-duration: .15s;
+  -o-transition-property: background;
+  -o-transition-duration: .15s;
+  -ms-transition-property: background;
+  -ms-transition-duration: .15s;
+  transition-property: background;
+  transition-duration: .15s;
+  width: 140px;
+}
+
+#activation-select-options li:hover {
+  background-color: #aaa;
+}
+
+#activation-select-options .selected {
+  background-color: #ddd;
+}
+
+#activation-select-options .section {
+  background-color: #797878;
+}
+
+#activation-select-options li img {
+  height:20px;
+  vertical-align:middle;
+}
+
+#activation-select-options li.selectbtn.selected {
+  background-color: #fff;
+}
+
+#activation-select-options li.selectbtn:hover {
+  background-color: #fff;
+}
+
+#activation-select-options li.selectbtn img.matbtn {
+  height: 32px;
+  vertical-align: middle;
+}
+
+$color: sandybrown;
+
+#btnmap {
+  position: absolute;
+  background-color: transparent;
+  background-image: url("https://genshin.tmkfrench.fr/media/bgbtnmap.png");
+  background-repeat: no-repeat;
+  background-size: 140px 71px;
+  width: 140px;
+  height: 71px;
+  top: 92px;
+  left: 180px;
+  text-align: center;
+  z-index: 100;
+  display: flex;
+
+  h1 {
+    margin: auto;
+    font-size: 19px;
+    color: rgb(187, 37, 10);
+    text-shadow: 5px 5px 5px saddlebrown;
+
+    &:hover {
+      color: $color;
+      cursor: pointer;
+    }
+  }
+}
+
